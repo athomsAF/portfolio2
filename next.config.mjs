@@ -1,4 +1,20 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+// alias
+import nextMDX from "@next/mdx";
 
-export default nextConfig;
+const withMDX = nextMDX({
+  extension: /\.mdx?$/,
+  options: {
+    remarkPlugins: [],
+    rehypePlugins: [],
+  },
+});
+
+/** @type {import('next').NextConfig} */
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  // Configure `pageExtensions` to include MDX files
+  pageExtensions: ["js", "jsx", "mdx", "ts", "tsx"],
+  // Optionally, add any other Next.js config below
+};
+export default withMDX(nextConfig);

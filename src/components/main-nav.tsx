@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { Icons } from "./icons";
-import { siteConfig } from "@/config/config";
+import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
 import { usePathname } from "next/navigation";
 

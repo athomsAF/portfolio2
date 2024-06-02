@@ -1,9 +1,10 @@
-import { siteConfig } from "@/config/config";
+import { siteConfig } from "@/config/site";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "./ui/button";
 import { Icons } from "./icons";
 import { MainNav } from "./main-nav";
+import { MobileNav } from "./mobile-nav";
 
 export function SiteHeader() {
   return (
@@ -23,10 +24,11 @@ export function SiteHeader() {
                   "w-10 px-0 hidden sm:inline-flex",
                 )}
               >
-                <Icons.GitHub className="h-4 w-4" />
+                <Icons.GitHub className="h-6 w-6" />
                 <span className="sr-only">GitHub</span>
               </div>
             </Link>
+            <MobileNav />
           </nav>
         </div>
       </div>
